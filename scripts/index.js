@@ -1,5 +1,5 @@
 // Implementar la clase activity con los parametros solicitados -->
- 
+
 class Activity {
   constructor(id, title, description, imgUrl) {
     this.id = id;
@@ -69,53 +69,51 @@ const allActivities = document.getElementById("allActivities");
 // repository.createActivity
 
 const handlerSubmit = () => {
-   
-    const title = inputName.value;
-    const description = inputDescription.value;
-    const imgUrl = inputImg.value;
+  const title = inputName.value;
+  const description = inputDescription.value;
+  const imgUrl = inputImg.value;
 
-    if (title && description && imgUrl) {
-      repository.createActivity(title, description, imgUrl);
-      displayCards();
-    } else {
-      alert("Completa todos los campos")
-    }
-    
-    console.log(repository);
+  if (title && description && imgUrl) {
+    repository.createActivity(title, description, imgUrl);
+    displayCards();
+  } else {
+    alert("Completa todos los campos");
+  }
 
-    inputName.value = "";
-    inputDescription.value= "";
-    inputImg.value = "";
-}
+  console.log(repository);
 
-addButton.addEventListener('click', handlerSubmit);
+  inputName.value = "";
+  inputDescription.value = "";
+  inputImg.value = "";
+};
 
+addButton.addEventListener("click", handlerSubmit);
 
 //convertir los ojetos a cards
 
-function displayCards() {
+function displayCards(Activity) {
   let activities = repository.getAllActivities();
   allActivities.innerHTML = "";
 
-  activities.forEach(activity => {
+  activities.map((activity) => {
+    const { id, title, description, imgUrl } = activity;
     const card = document.createElement("div");
     card.innerHTML = `
-      <div class="activity">
-      <img src=${activity.imgUrl} alt="actividad"/>
-      <h1>${activity.title}</h1>
-      <p>${activity.description}</p>
-      <button onclick="deleteCard(${activity.id})" >Borrar</button>
-      </div>
-      `;
+        <div class="activity">
+        <img src=${imgUrl} alt="actividad"/>
+        <h1>${title}</h1>
+        <p>${description}</p>
+        <button onclick="deleteCard(${id})" >Borrar</button>
+        </div>
+        `;
     // appendear todas las tarjetas al contenedor
     allActivities.appendChild(card);
-  })
+  });
 }
- 
- // Función para eliminar la card
+
+// Función para eliminar la card
 function deleteCard(id) {
   repository.deleteActivity(id);
-  displayCards();  
-  
+  displayCards();
 }
  
