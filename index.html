@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href="./assets/logo.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <img class="logo" src="./assets/logo.png" alt="logo" />
+      <div class="title">
+        <h1>Proyecto &lt;modulo 1/&gt; - SoyHenry</h1>
+        <h2>Felipe Hernández Díaz de León</h2>
+      </div>
+      <img class="logo" src="./assets/henry.png" alt="logo" />
+    </header>
+
+    <section class="about">
+      <h1>&lt;Sobre mí  /&gt;</h1>
+      <p>
+        ¡Bienvenido a mi web! Soy un apasionado estudiante de la carrera de Full
+        Stack Developer con 41 años de edad, radicando en Ciudad deMéxico. Mi
+        fascinación por la creación de experiencias digitales excepcionales me
+        ha llevado a explorar profundamente el mundo del desarrollo web,
+        centrándome especialmente en las áreas del desafiante y emocionante
+        campo del front-end.
+      </p>
+    </section>
+
+    <section class="stack">
+      <h1>&lt;Mi Stack favorito/&gt;</h1>
+      <div class="stackLogos">
+        <div class="card">
+          <img class="stacklogo" src="./assets/html-5.png" alt="html" />
+          <p>HTML</p>
+        </div>
+
+        <div class="card">
+          <img class="stacklogo" src="./assets/css-3.png" alt="css" />
+          <p>CSS</p>
+        </div>
+
+        <div class="card">
+          <img class="stacklogo" src="./assets/js.png" alt="js" />
+          <p>Javascript</p>
+        </div>
+
+        <div class="card">
+          <img class="stacklogo" src="./assets/react.png" alt="js" />
+          <p>React</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="activities">
+      <h1>&lt;Mis actividades favoritas/&gt;</h1>
+
+      <form class="form" action="">
+        <input id="inputName" name="name" type="text" placeholder="Nombre de la actividad:" />
+
+        <input
+          id="inputDescription"
+          name="description"
+          type="text"
+          placeholder="Descripción de la actividad:"
+        />
+
+        <input id="inputImg" name="image" type="text" placeholder="Link a la imagen:" />
+
+        <input id="addButton" type="button" value="Agregar actividad" />
+      </form>
+
+    </section>
+
+    <div id ="allActivities">
+      
+    </div>
+
+    <footer class="footer">
+      <p>SkullDev 2024</p>
+    </footer>
+
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

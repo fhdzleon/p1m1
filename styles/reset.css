@@ -1,0 +1,38 @@
+/* Reset básico */
+
+/* Establecer el margen y relleno en 0 para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluir el relleno y el borde en el tamaño total del elemento */
+    font-family: "Orbitron", sans-serif;
+}
+
+/* Establecer la tipografía base */
+body {
+    font-family: Arial, sans-serif; /* Utilizar una fuente sans-serif como predeterminada */
+}
+
+/* Establecer estilos básicos para elementos de lista */
+ul, ol {
+    list-style: none; /* Eliminar viñetas y numeración de las listas */
+}
+
+/* Establecer estilos para los elementos de encabezado */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal; /* Evitar estilos de fuente predeterminados que podrían cambiar el peso */
+}
+
+/* Establecer estilos básicos para enlaces */
+a {
+    text-decoration: none; /* Eliminar subrayado predeterminado */
+    color: inherit; /* Heredar el color del texto de su elemento padre */
+}
+
+input {
+    appearance: none; /* Elimina los estilos predeterminados de los input */
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    outline: none; /* Sin contorno al enfocar */
+    box-sizing: border-box; /* Modelo de caja border-box para incluir el relleno y el borde en el ancho y la altura */
+}
