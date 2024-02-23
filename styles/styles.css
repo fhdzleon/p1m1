@@ -189,4 +189,43 @@ body {
   background-color: black;
 }
 
+/* Media query para dispositivos de hasta 768px de ancho */
+@media only screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .logo {
+    height: 100px; /* Tamaño reducido para los logos */
+  }
+
+  .title {
+    margin-top: 20px; /* Espacio adicional entre el logo y el título */
+  }
+
+  .about {
+    width: 90%; /* Ampliar el ancho del about section */
+  }
+
+  .stackLogos {
+    flex-wrap: wrap; /* Los logos del stack se envolverán en una nueva línea */
+    justify-content: center; /* Centrar los logos */
+  }
+
+  .stacklogo {
+    height: 100px; /* Tamaño reducido para los logos del stack */
+    margin: 10px; /* Espacio entre los logos */
+  }
+
+  .activities .form {
+    width: 90%; /* El formulario tomará el mismo ancho que el about section */
+  }
+}
+
+/* Media query para dispositivos de hasta 480px de ancho */
+@media only screen and (max-width: 480px) {
+  .stacklogo {
+    height: 80px; /* Reducir aún más el tamaño de los logos del stack */
+  }
+}
